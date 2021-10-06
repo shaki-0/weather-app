@@ -106,3 +106,8 @@ a {
   color: #ffffff;
   font-family: "Poppins", sans-serif;
 }
+
+.open-link {
+  text-align: center;
+  margin: 0 auto;
+}
