@@ -91,10 +91,12 @@ p {
   border-radius: 5px 5px;
 }
 
-a {
+a,
+.name {
   font-size: 14px;
   font-family: "Poppins", sans-serif;
   text-align: center;
+  display: block;
 }
 
 .units {
