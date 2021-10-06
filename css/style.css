@@ -107,7 +107,9 @@ a {
   font-family: "Poppins", sans-serif;
 }
 
-.open-link {
+.open-link,
+.name {
   text-align: center;
-  margin: 0 auto;
+  display: inline;
+  margin: 20px 15px 20px 15px;
 }
