@@ -28,13 +28,15 @@ h3 {
   text-align: center;
   color: #ffffff;
   margin: 29px auto;
+  line-height: 20px;
 }
 
 p {
   text-align: center;
   color: #ffffff;
-  margin: -18px auto;
-  font-size: 16px;
+  margin: -29px auto;
+  font-size: 14px;
+  line-height: 20px;
 }
 .london-cloudy {
   color: #ffffff;
