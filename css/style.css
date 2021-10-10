@@ -4,7 +4,8 @@
     rgb(108, 98, 128) 2.6%,
     rgb(27, 245, 241) 100.2%
   );
-  border: 20px;
+  border: 1px solid #6c6280;
+  border-radius: 5px;
   width: 500px;
   margin: 50px auto;
   display: block;
