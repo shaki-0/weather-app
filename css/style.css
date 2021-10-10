@@ -74,14 +74,15 @@ p {
   padding: 10px;
 }
 
-.search-icon {
-  background-color: #af92e9;
+.btn-outline-secondary {
   color: #ffffff;
-  border-style: none;
-  box-sizing: border-box;
-  border-width: 0 0 3px;
-  padding: 3px 10px;
-  border-radius: 5px 5px;
+  border-style: solid;
+  border-color: #ffffff;
+}
+
+.btn-outline-secondary:hover {
+  background: #6c6280;
+  color: #2cd6d9;
 }
 
 a,
