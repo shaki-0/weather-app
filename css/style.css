@@ -8,7 +8,6 @@
   border-radius: 5px;
   width: 500px;
   margin: 50px auto;
-  display: block;
   padding: 50px;
 }
 
@@ -40,7 +39,6 @@ p {
 .london-cloudy {
   color: #ffffff;
   font-size: 50px;
-  display: block;
   text-align: center;
   position: relative;
   left: 95px;
@@ -52,7 +50,6 @@ p {
   height: 250px;
   border-radius: 50%;
   margin: 30px auto;
-  display: block;
 }
 
 .col-3,
@@ -64,7 +61,6 @@ p {
   width: 74px;
   height: 138px;
   color: #ffffff;
-  display: block;
   text-align: center;
   margin: 5px;
   font-size: 14px;
@@ -75,7 +71,6 @@ p {
   color: #ffffff;
   font-size: 30px;
   padding: 10px;
-  display: 0;
 }
 
 .search-icon {
