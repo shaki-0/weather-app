@@ -54,7 +54,6 @@ p {
   border-radius: 50%;
   margin: 30px auto;
 }
-
 .col-3,
 .col-2,
 .col-1 {
@@ -68,7 +67,6 @@ p {
   margin: 5px;
   font-size: 14px;
 }
-
 .fa-sun,
 .fa-cloud-showers-heavy {
   color: #ffffff;
@@ -77,9 +75,6 @@ p {
 }
 
 .search-icon {
-  margin-right: 30px;
-  position: relative;
-  bottom: 31px;
   background-color: #af92e9;
   color: #ffffff;
   border-style: none;
@@ -102,5 +97,5 @@ a,
   left: 142px;
   color: #ffffff;
   font-size: 11px;
-  font-weight: bold;
+  font-weight: 500;
 }

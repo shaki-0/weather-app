@@ -26,12 +26,20 @@
   <body>
     <div class="container">
       <form id="search-form">
-        <input type = "text" placeholder= "Enter a city" autocomplete: "off";
-        autofocus: "on"; id="submit-city-input" />
-
-        <input type="submit" value="Search" class="search-icon" />
+        <div class="input-group">
+          <input type = "search" class= form-control placeholder= "Type a city"
+          autocomplete: "off"; autofocus: "on"; id="submit-city-input" />
+          <input
+            class="btn btn-outline-secondary"
+            type="submit"
+            value="Search"
+          />
+          <button class="btn btn-outline-secondary" id="location">
+            Location
+          </button>
+        </div>
       </form>
-      <button id="location">Current Location</button>
+
       <h1>London</h1>
       <h2></h2>
 
