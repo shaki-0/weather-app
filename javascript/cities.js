@@ -25,9 +25,13 @@ h2.innerHTML = `${day} ${hours}:${minutes}`;
 
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
+  let h3 = document.querySelector("h3");
+  h3.innerHTML = temperature;
+
   let humidityElement = Math.round(response.data.main.humidity);
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = humidityElement;
+
   let feelsLikeElement = Math.round(response.data.main.feels_like);
   let feels = document.querySelector("#feels");
   feels.innerHTML = feelsLikeElement;
@@ -35,13 +39,20 @@ function showTemperature(response) {
   let windElement = Math.round(response.data.wind.speed);
   let wind = document.querySelector("#wind");
   wind.innerHTML = windElement;
+
   let descriptionElement = response.data.weather[0].description;
   let description = document.querySelector("#description");
   description.innerHTML = descriptionElement;
-  let h3 = document.querySelector("h3");
-  h3.innerHTML = temperature;
+
   let h1 = document.querySelector("h1");
   h1.innerHTML = response.data.name;
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `src/images/${response.data.weather[0].icon}.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function city(event) {
