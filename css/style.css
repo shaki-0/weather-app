@@ -31,6 +31,7 @@ p {
   margin: -29px auto;
   font-size: 14px;
   line-height: 20px;
+  text-transform: capitalize;
 }
 .london-cloudy {
   color: #ffffff;
@@ -78,7 +79,7 @@ p {
   color: #2cd6d9;
 }
 
-a,
+.git-link,
 .name {
   font-size: 14px;
   text-align: center;

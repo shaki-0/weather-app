@@ -29,7 +29,7 @@ function showTemperature(response) {
   let windElement = Math.round(response.data.wind.speed);
   let wind = document.querySelector("#wind");
   wind.innerHTML = windElement;
-  let descriptionElement = response.data.weather[0].main;
+  let descriptionElement = response.data.weather[0].description;
   let description = document.querySelector("#description");
   description.innerHTML = descriptionElement;
   let h3 = document.querySelector("h3");
