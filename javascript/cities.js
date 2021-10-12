@@ -24,9 +24,11 @@ let h2 = document.querySelector("h2");
 h2.innerHTML = `${day} ${hours}:${minutes}`;
 
 function showTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
-  let h3 = document.querySelector("h3");
-  h3.innerHTML = temperature;
+  let temperatureElement = Math.round(response.data.main.temp);
+  let temperature = document.querySelector("#temperature");
+  temperature.innerHTML = temperatureElement;
+
+  celsius = response.data.main.temp;
 
   let humidityElement = Math.round(response.data.main.humidity);
   let humidity = document.querySelector("#humidity");
@@ -68,11 +70,6 @@ function handleSubmit(event) {
   search(submitCity.value);
 }
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
-
-search("London");
-
 function displayPosition(position) {
   let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
   let latitude = position.coords.latitude;
@@ -89,3 +86,33 @@ function showLocation(event) {
 
 let button = document.querySelector("#location");
 button.addEventListener("click", showLocation);
+
+function showFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheit = (celsius * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  temperatureElement.innerHTML = Math.round(fahrenheit);
+}
+
+function showCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celsius);
+}
+
+let celsius = null;
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsius);
+
+search("London");
