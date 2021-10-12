@@ -44,8 +44,9 @@ function showTemperature(response) {
   let description = document.querySelector("#description");
   description.innerHTML = descriptionElement;
 
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = response.data.name;
+  let cityName = response.data.name;
+  let city = document.querySelector("#city");
+  city.innerHTML = cityName;
 
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
