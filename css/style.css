@@ -42,9 +42,8 @@ p {
   margin: 30px auto;
   text-decoration: none;
 }
-.col-3,
-.col-2,
-.col-1 {
+
+.col-2 {
   border: 1px solid white;
   padding: 8px;
   border-radius: 30px;
@@ -54,6 +53,12 @@ p {
   text-align: center;
   margin: 5px;
   font-size: 14px;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #000;
 }
 
 .fa-sun,
