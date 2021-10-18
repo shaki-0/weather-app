@@ -23,6 +23,28 @@ let day = days[current.getDay()];
 let h2 = document.querySelector("h2");
 h2.innerHTML = `${day} ${hours}:${minutes}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast-temperatures");
+  let forecastHTML = `<div class="row">`;
+  let weekdays = ["Tue", "Wed", "Thurs", "Fri"];
+  weekdays.forEach(function (weekdays) {
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="col-2">
+          ${weekdays}
+          <i class="fas fa-sun"></i>
+          <span class="weather-temp-max">23° </span>
+          <span class="weather-temp-min"> 19°</span>
+        </div>
+      </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showTemperature(response) {
   let temperatureElement = Math.round(response.data.main.temp);
   let temperature = document.querySelector("#temperature");
@@ -116,3 +138,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsius);
 
 search("London");
+displayForecast();
