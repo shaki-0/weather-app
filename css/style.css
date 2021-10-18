@@ -56,12 +56,16 @@ p {
   font-size: 14px;
 }
 
-
 .fa-sun,
 .fa-cloud-showers-heavy {
   color: #ffffff;
   font-size: 30px;
   padding: 10px;
+}
+
+.weather-temp-min {
+  opacity: 0.6;
+  font-size: 14px;
 }
 
 .btn-outline-secondary {
