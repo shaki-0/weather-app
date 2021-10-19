@@ -26,7 +26,7 @@ h2.innerHTML = `${day} ${hours}:${minutes}`;
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast-temperatures");
   let forecastHTML = `<div class="row">`;
-  let weekdays = ["Tue", "Wed", "Thurs", "Fri"];
+  let weekdays = ["Tue", "Wed", "Thurs", "Fri", "Sat"];
   weekdays.forEach(function (weekdays) {
     forecastHTML =
       forecastHTML +
@@ -37,7 +37,6 @@ function displayForecast() {
           <span class="weather-temp-max">23° </span>
           <span class="weather-temp-min"> 19°</span>
         </div>
-      </div>
   `;
   });
 
