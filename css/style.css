@@ -1,9 +1,5 @@
 .container {
-  background: linear-gradient(
-    31deg,
-    rgb(126, 85, 190) 5%,
-    rgb(52, 201, 207) 50%
-  );
+  background: radial-gradient(rgb(52, 201, 207) 70%, rgb(139, 102, 241) 100%);
   border: 1px solid #ffffff;
   border-radius: 5px;
   width: 500px;
@@ -13,7 +9,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: radial-gradient(rgb(115, 252, 250) 20%, rgb(139, 102, 241) 100%);
+  background: radial-gradient(rgb(139, 102, 241) 51%, rgb(52, 201, 207) 100%);
 }
 
 h1,
@@ -61,16 +57,9 @@ p {
   color: #000;
 }
 
-.fa-sun,
-.fa-cloud-showers-heavy {
-  color: #ffffff;
-  font-size: 30px;
-  padding: 10px;
-}
-
 .weather-temp-min {
   opacity: 0.6;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .btn-outline-secondary {
@@ -80,8 +69,8 @@ p {
 }
 
 .btn-outline-secondary:hover {
-  background: #6c6280;
-  color: #2cd6d9;
+  background: #8b66f1;
+  color: #34c9cf;
 }
 
 .git-link,
@@ -105,6 +94,10 @@ p {
   color: #ffffff;
   font-size: 11px;
   font-weight: 500;
+}
+
+.icon-size {
+  width: 60px;
 }
 
 .change,
