@@ -23,21 +23,38 @@ let day = days[current.getDay()];
 let h2 = document.querySelector("h2");
 h2.innerHTML = `${day} ${hours}:${minutes}`;
 
+function showDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast-temperatures");
+
   let forecastHTML = `<div class="row">`;
-  let weekdays = ["Tue", "Wed", "Thurs", "Fri", "Sat"];
-  weekdays.forEach(function (weekdays) {
-    forecastHTML =
-      forecastHTML +
-      `
+
+  forecast.forEach(function (forecastDays, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
         <div class="col-2">
-          ${weekdays}
-          <i class="fas fa-sun"></i>
-          <span class="weather-temp-max">23° </span>
-          <span class="weather-temp-min"> 19°</span>
+        <div class = "weather-forecast-date"> ${showDay(forecastDays.dt)} </div>
+         <img src = src/images/${forecastDays.weather[0].icon}.png
+         />
+          <span class="weather-temp-max"> ${Math.round(
+            forecastDays.temp.max
+          )}° </span>
+          <span class="weather-temp-min"> ${Math.round(
+            forecastDays.temp.min
+          )}°</span>
         </div>
   `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div`;
