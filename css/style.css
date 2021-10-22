@@ -79,6 +79,7 @@ p {
   text-align: center;
   display: block;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .weather-icon {
@@ -100,7 +101,6 @@ p {
   width: 60px;
 }
 
-.change,
 .active {
   color: #ffffff;
   text-decoration: none;
